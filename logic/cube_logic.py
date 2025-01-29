@@ -1,5 +1,5 @@
 import os
-# os.chdir("prolog") # Change to the directory containing the solver.pl file to solve the bug in the pyswipl library FIXME: decommentare
+os.chdir("prolog") # Change to the directory containing the solver.pl file to solve the bug in the pyswipl library
 from pyswip import Prolog
 
 class CubeLogic:
