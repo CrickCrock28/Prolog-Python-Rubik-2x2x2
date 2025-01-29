@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>gui package &#8212; Soluzione Intelligente del Cubo di Rubik 2x2x2 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="logic package" href="logic.html" />
+    <link rel="prev" title="app module" href="app.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="gui-package">
+<h1>gui package<a class="headerlink" href="#gui-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-gui.gui">
+<span id="gui-gui-module"></span><h2>gui.gui module<a class="headerlink" href="#module-gui.gui" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gui.gui.</span></span><span class="sig-name descname"><span class="pre">CubeGUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to manage the graphical interface for the 2x2 Rubik’s Cube using tkinter.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initializes the graphical interface for the Rubik’s Cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>master</strong> (<em>tk.Tk</em>) – The root window for the tkinter application.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.change_color">
+<span class="sig-name descname"><span class="pre">change_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.change_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.change_color" title="Link to this definition">¶</a></dt>
+<dd><p>Changes the color of the selected piece of the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> (<em>str</em>) – The face of the cube.</p></li>
+<li><p><strong>row</strong> (<em>int</em>) – The row index of the piece.</p></li>
+<li><p><strong>col</strong> (<em>int</em>) – The column index of the piece.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.draw_interface">
+<span class="sig-name descname"><span class="pre">draw_interface</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.draw_interface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.draw_interface" title="Link to this definition">¶</a></dt>
+<dd><p>Draws the graphical interface for the cube and the color palette.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.draw_palette">
+<span class="sig-name descname"><span class="pre">draw_palette</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.draw_palette"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.draw_palette" title="Link to this definition">¶</a></dt>
+<dd><p>Draws the selectable color palette for the cube.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.reset_cube">
+<span class="sig-name descname"><span class="pre">reset_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.reset_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.reset_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Resets the cube colors to the initial solved state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.select_color">
+<span class="sig-name descname"><span class="pre">select_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.select_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.select_color" title="Link to this definition">¶</a></dt>
+<dd><p>Updates the currently selected color.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>color</strong> (<em>str</em>) – The color selected from the palette.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.shuffle_cube">
+<span class="sig-name descname"><span class="pre">shuffle_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.shuffle_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.shuffle_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Shuffles the cube to a random state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gui.gui.CubeGUI.solve_cube">
+<span class="sig-name descname"><span class="pre">solve_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/gui/gui.html#CubeGUI.solve_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gui.gui.CubeGUI.solve_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the cube’s colors, checks if it is solved, and attempts to solve it using CubeLogic.
+Displays the result or any errors in a message box.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-gui">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-gui" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Soluzione Intelligente del Cubo di Rubik 2x2x2</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">2x2x2-Cube-Solver-main</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app.html">app module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">gui package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logic.html">logic package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">2x2x2-Cube-Solver-main</a><ul>
+      <li>Previous: <a href="app.html" title="previous chapter">app module</a></li>
+      <li>Next: <a href="logic.html" title="next chapter">logic package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Luca Ardito.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/gui.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

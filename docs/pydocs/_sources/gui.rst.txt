@@ -1,0 +1,21 @@
+gui package
+===========
+
+Submodules
+----------
+
+gui.gui module
+--------------
+
+.. automodule:: gui.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

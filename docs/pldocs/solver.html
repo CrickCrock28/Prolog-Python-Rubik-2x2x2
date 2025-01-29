@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>solver.pl</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>solver.pl</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="solve/2"><b class="pred">solve</b><var class="arglist">(+State, -Path)</var></a></dt><dd class="defbody">Finds the shortest path to solve the given scrambled state of the cube.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>State</var></td><td class="argdescr">- The scrambled state of the cube represented as a string.</td></tr>
+<tr><td><var>Path</var></td><td class="argdescr">- The sequence of moves required to solve the cube.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="build_sphere/4"><b class="pred">build_sphere</b><var class="arglist">(+Origin, +State, +Moves, +Level)</var></a></dt><dd class="defbody">Builds the state space for the cube from the given origin.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Origin</var></td><td class="argdescr">- Either 'scrambled' or 'solved'.</td></tr>
+<tr><td><var>State</var></td><td class="argdescr">- The state of the cube.</td></tr>
+<tr><td><var>Moves</var></td><td class="argdescr">- List of moves leading to this state.</td></tr>
+<tr><td><var>Level</var></td><td class="argdescr">- Depth of the state in the search tree.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="increment_states/0"><b class="pred">increment_states</b></a></dt><dd class="defbody">Increments the global counter tracking the number of explored states.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="reset_states/0"><b class="pred">reset_states</b></a></dt><dd class="defbody">Resets the global state counter to zero.</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="build_tree/2"><b class="pred">build_tree</b><var class="arglist">(+Origin, +Level)</var></a></dt><dd class="defbody">Builds the search tree for the cube states from the given origin.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Origin</var></td><td class="argdescr">- Either 'scrambled' or 'solved'.</td></tr>
+<tr><td><var>Level</var></td><td class="argdescr">- Current depth in the search tree.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="find_path/1"><b class="pred">find_path</b><var class="arglist">(-Path)</var></a></dt><dd class="defbody">Finds the shortest path between the scrambled and solved states.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Path</var></td><td class="argdescr">- The sequence of moves required to solve the cube.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="reverse_all_moves/2"><b class="pred">reverse_all_moves</b><var class="arglist">(+Moves, -ReversedMoves)</var></a></dt><dd class="defbody">Reverses the direction of all moves in the given list.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Moves</var></td><td class="argdescr">- List of original moves.</td></tr>
+<tr><td><var>ReversedMoves</var></td><td class="argdescr">- List of moves with reversed directions.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="concat/3"><b class="pred">concat</b><var class="arglist">(+List1, +List2, -Result)</var></a></dt><dd class="defbody">Concatenates two lists into a single list.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>List1</var></td><td class="argdescr">- The first list.</td></tr>
+<tr><td><var>List2</var></td><td class="argdescr">- The second list.</td></tr>
+<tr><td><var>Result</var></td><td class="argdescr">- The concatenated list.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+</dl>
+
+</body>
+</html>

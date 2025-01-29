@@ -1,0 +1,29 @@
+logic package
+=============
+
+Submodules
+----------
+
+logic.cube\_logic module
+------------------------
+
+.. automodule:: logic.cube_logic
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+logic.test module
+-----------------
+
+.. automodule:: logic.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: logic
+   :members:
+   :undoc-members:
+   :show-inheritance:

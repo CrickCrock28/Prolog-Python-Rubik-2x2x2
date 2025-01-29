@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cube_utils.pl -- 2x2x2 Rubik's Cube Utilities</title>
+
+<link rel="stylesheet" type="text/css" href="pldoc.css">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+
+
+<h1 class="file"><span style="float:right"></span>cube_utils.pl -- 2x2x2 Rubik's Cube Utilities</h1>
+
+<dl>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="state_zero/1"><b class="pred">state_zero</b><var class="arglist">(-State:atom)</var></a></dt><dd class="defbody">Provides the solved state of the 2x2x2 Rubik's Cube.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>State</var></td><td class="argdescr">- The solved state, represented as an atom.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="move/1"><b class="pred">move</b><var class="arglist">(?Move:atom)</var></a></dt><dd class="defbody">Defines valid moves for the 2x2x2 Rubik's Cube.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Move</var></td><td class="argdescr">- A valid move (e.g., down_clockwise, back_counterclockwise).</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="reversal/2"><b class="pred">reversal</b><var class="arglist">(+Move:atom, -Reversal:atom)</var></a></dt><dd class="defbody">Provides the reversal of a given move.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Move</var></td><td class="argdescr">- The original move.</td></tr>
+<tr><td><var>Reversal</var></td><td class="argdescr">- The move that reverses the original move.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="check_color_count/3"><b class="pred">check_color_count</b><var class="arglist">(+State:atom, +Color:char, +ExpectedCount:int)</var></a></dt><dd class="defbody">Validates if a specific color appears the expected number of times in the state.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>State</var></td><td class="argdescr">- The cube state.</td></tr>
+<tr><td><var>Color</var></td><td class="argdescr">- The color to validate.</td></tr>
+<tr><td><var>ExpectedCount</var></td><td class="argdescr">- The expected count of the color.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="valid_state/1"><b class="pred">valid_state</b><var class="arglist">(+State:atom)</var></a></dt><dd class="defbody">Checks if the given cube state is valid.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>State</var></td><td class="argdescr">- The cube state to validate.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="apply_path/2"><b class="pred">apply_path</b><var class="arglist">(+Start:atom, +Moves:list)</var></a></dt><dd class="defbody">Applies a series of moves to a cube state
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Start</var></td><td class="argdescr">- The starting cube state.</td></tr>
+<tr><td><var>Moves</var></td><td class="argdescr">- The list of moves to apply.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="shuffle/1"><b class="pred">shuffle</b><var class="arglist">(+Rand:atom)</var></a></dt><dd class="defbody">Generates a randomly shuffled cube state.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>Rand</var></td><td class="argdescr">- The resulting shuffled state.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+<dt class="pubdef"><span style="float:right">&nbsp;</span><a name="move_transform/3"><b class="pred">move_transform</b><var class="arglist">(+In_state:atom, +Move:atom, -Out_state:atom)</var></a></dt><dd class="defbody">Transforms a cube state based on a move.
+
+<dl class="tags">
+<dt class="tag">Arguments:</dt><dd>
+
+<table class="arglist">
+<tr><td><var>In_state</var></td><td class="argdescr">- The input cube state.</td></tr>
+<tr><td><var>Move</var></td><td class="argdescr">- The move to apply.</td></tr>
+<tr><td><var>Out_state</var></td><td class="argdescr">- The resulting cube state after applying the move.</td></tr>
+</table>
+
+</dd>
+</dl>
+
+</dd>
+</dl>
+
+</body>
+</html>

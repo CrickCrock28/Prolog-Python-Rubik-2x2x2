@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>logic package &#8212; Soluzione Intelligente del Cubo di Rubik 2x2x2 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=8d563738"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="gui package" href="gui.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="logic-package">
+<h1>logic package<a class="headerlink" href="#logic-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-logic.cube_logic">
+<span id="logic-cube-logic-module"></span><h2>logic.cube_logic module<a class="headerlink" href="#module-logic.cube_logic" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">logic.cube_logic.</span></span><span class="sig-name descname"><span class="pre">CubeLogic</span></span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to handle the logic of the 2x2 Rubik’s Cube, including state representation,
+color validation, and solving through Prolog.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initializes the CubeLogic class and sets up the initial cube state.
+Loads the Prolog solver file for solving and validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – If the Prolog file cannot be loaded.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic._get_order">
+<span class="sig-name descname"><span class="pre">_get_order</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic._get_order"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic._get_order" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the order of cube positions for Prolog string conversion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of tuples representing the cube positions.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.get_color">
+<span class="sig-name descname"><span class="pre">get_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.get_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.get_color" title="Link to this definition">¶</a></dt>
+<dd><p>Retrieves the color of a specific face, row, and column of the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> (<em>str</em>) – The face of the cube (e.g., “U”, “D”, “F”, “B”, “L”, “R”).</p></li>
+<li><p><strong>row</strong> (<em>int</em>) – The row index (0 or 1).</p></li>
+<li><p><strong>col</strong> (<em>int</em>) – The column index (0 or 1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The color at the specified position.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.get_cube_string">
+<span class="sig-name descname"><span class="pre">get_cube_string</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.get_cube_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.get_cube_string" title="Link to this definition">¶</a></dt>
+<dd><p>Converts the current cube state into a Prolog-compatible string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A string representing the cube state, formatted for Prolog predicates.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.get_states_explored">
+<span class="sig-name descname"><span class="pre">get_states_explored</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.get_states_explored"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.get_states_explored" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of states explored during the last solve operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of states explored.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.is_solved">
+<span class="sig-name descname"><span class="pre">is_solved</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.is_solved"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.is_solved" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the cube is in the solved state using the Prolog predicate <cite>state_zero/1</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the cube is solved, False otherwise.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.reset_cube">
+<span class="sig-name descname"><span class="pre">reset_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.reset_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.reset_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Resets the cube to the solved state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.set_color">
+<span class="sig-name descname"><span class="pre">set_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">face</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.set_color"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.set_color" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the color of a specific face, row, and column of the cube.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>face</strong> (<em>str</em>) – The face of the cube.</p></li>
+<li><p><strong>row</strong> (<em>int</em>) – The row index.</p></li>
+<li><p><strong>col</strong> (<em>int</em>) – The column index.</p></li>
+<li><p><strong>color</strong> (<em>str</em>) – The color to set.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.set_cube_from_string">
+<span class="sig-name descname"><span class="pre">set_cube_from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.set_cube_from_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.set_cube_from_string" title="Link to this definition">¶</a></dt>
+<dd><p>Updates the cube state based on a Prolog-compatible string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cube_string</strong> (<em>str</em>) – A string representing the cube state, formatted for Prolog predicates.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.shuffle_cube">
+<span class="sig-name descname"><span class="pre">shuffle_cube</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.shuffle_cube"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.shuffle_cube" title="Link to this definition">¶</a></dt>
+<dd><p>Shuffles the cube to a random state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.solve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.solve" title="Link to this definition">¶</a></dt>
+<dd><p>Solves the Rubik’s Cube using Prolog and returns the list of moves.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The solution as a sequence of moves, or None if no solution exists.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.update_states_explored">
+<span class="sig-name descname"><span class="pre">update_states_explored</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.update_states_explored"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.update_states_explored" title="Link to this definition">¶</a></dt>
+<dd><p>Update the number of states explored with the current count from Prolog.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="logic.cube_logic.CubeLogic.validate_colors">
+<span class="sig-name descname"><span class="pre">validate_colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/cube_logic.html#CubeLogic.validate_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.cube_logic.CubeLogic.validate_colors" title="Link to this definition">¶</a></dt>
+<dd><p>Validates the cube’s colors to ensure each appears the correct number of times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A boolean indicating validity and a list of errors (if any).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-logic.test">
+<span id="logic-test-module"></span><h2>logic.test module<a class="headerlink" href="#module-logic.test" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="logic.test.analyze_results">
+<span class="sig-prename descclassname"><span class="pre">logic.test.</span></span><span class="sig-name descname"><span class="pre">analyze_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/test.html#analyze_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.test.analyze_results" title="Link to this definition">¶</a></dt>
+<dd><p>Analyzes test results and calculates average metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>results</strong> (<em>dict</em>) – Collected test results.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Calculated average metrics.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="logic.test.main">
+<span class="sig-prename descclassname"><span class="pre">logic.test.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/test.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.test.main" title="Link to this definition">¶</a></dt>
+<dd><p>Main function to initialize the cube logic system, run tests, and analyze results.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="logic.test.test_resolution">
+<span class="sig-prename descclassname"><span class="pre">logic.test.</span></span><span class="sig-name descname"><span class="pre">test_resolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cube_logic</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_tests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/logic/test.html#test_resolution"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#logic.test.test_resolution" title="Link to this definition">¶</a></dt>
+<dd><p>Tests the cube-solving algorithm on random configurations and collects metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cube_logic</strong> (<a class="reference internal" href="#logic.cube_logic.CubeLogic" title="logic.cube_logic.CubeLogic"><em>CubeLogic</em></a>) – Instance of the cube logic system.</p></li>
+<li><p><strong>num_tests</strong> (<em>int</em>) – Number of random configurations to test.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Collected metrics, including average solving time, explored depth, and explored states.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-logic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-logic" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Soluzione Intelligente del Cubo di Rubik 2x2x2</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">2x2x2-Cube-Solver-main</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="app.html">app module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gui.html">gui package</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">logic package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">2x2x2-Cube-Solver-main</a><ul>
+      <li>Previous: <a href="gui.html" title="previous chapter">gui package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Luca Ardito.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/logic.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
